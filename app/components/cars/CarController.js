@@ -9,7 +9,7 @@ function drawCars() {
   for (let i = 0; i < cars.length; i++) {
     const car = cars[i];
     template += `
-    <div class="col-3">
+    <div id="car-ad" class="col-3">
         <p>Make: ${car.make}</p>
         <p>Model: ${car.model}</p>
         <p>Price: ${car.price}</p>

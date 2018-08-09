@@ -9,7 +9,7 @@ function drawHouses() {
     for (let i = 0; i < houses.length; i++) {
         const house = houses[i];
         template += `
-        <div class="col-3">
+        <div id="house-ad" class="col-3">
         <p>Bedrooms: ${house.numOfBedrooms}</p>
         <p>Bathrooms: ${house.numOfBathrooms}</p>
         <p>City: ${house.locationCity}</p>

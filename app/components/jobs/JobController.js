@@ -9,7 +9,7 @@ function drawJobs() {
   for (let i = 0; i < jobs.length; i++) {
     const job = jobs[i];
     template += `
-    <div class="col-3">
+    <div id="job-ad" class="col-3">
         <p>Position Title: ${job.positionTitle}</p>
         <p>Location: ${job.location}</p>
         <p>Pay: ${job.pay}</p>

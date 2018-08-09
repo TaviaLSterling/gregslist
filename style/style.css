@@ -1,6 +1,6 @@
 img {
-    height: 200px;
-    width: 200px
+    height: 100px;
+    width: 100px
 }
 body {
     background-color: grey;
@@ -16,4 +16,7 @@ border: 2px solid black
 }
 h3, h2 {
     text-align: center;
+}
+#car-ad, #house-ad, #job-ad {
+    outline: 1px solid black;
 }
