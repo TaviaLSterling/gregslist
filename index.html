@@ -54,6 +54,21 @@
     </div>
   </div>
 
+  <form onsubmit="app.controllers.jobController.addJob(event)">
+        
+    <input type="text" name="positionTitle" placeholder="Position Title" required>
+    <input type="text" name="location" placeholder="City" required>
+    <input type="text" name="pay" placeholder="Pay" required>
+    <input type="url" name="imgUrl" placeholder="Image Link" required>
+    <input type="text" name="description" placeholder="Job Description" required>
+    <input type="number" name="contactNum" placeholder="Contact Phone Number" required>
+    <button type="submit">Add Job</button>
+  </form>
+
+  <div class="container">
+    <div id="jobs" class="row">
+    </div>
+  </div>
 
   <script src="main.js" type="module"></script>
 </body>
