@@ -4,4 +4,16 @@ img {
 }
 body {
     background-color: grey;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#job-form, #car-form, #house-form {
+   margin-top:70px;
+}
+
+.header {
+padding-top: 20px;
+border: 2px solid black
+}
+h3, h2 {
+    text-align: center;
 }
