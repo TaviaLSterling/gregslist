@@ -11,7 +11,23 @@
 </head>
 
 <body>
+    <form onsubmit="app.controllers.houseController.addHouse(event)">
+        
+        <input type="number" name="numOfBedrooms" placeholder="# of bedrooms" required>
+        <input type="number" name="numOfBathrooms" placeholder="# of bathrooms" required>
+        <input type="text" name="locationCity" placeholder="City" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <input type="url" name="imgUrl" placeholder="Image Link" required>
+        <button type="submit">Add House</button>
+      </form>
 
+      <div class="container">
+        <div id="houses" class="row">
+        </div>
+      </div>
+
+
+      
   <form onsubmit="app.controllers.carController.addCar(event)">
     <label for="make">Make</label>
     <input type="text" name="make" placeholder="Make" required>
