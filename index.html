@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Gregslist</title>
+  <title>Greg's List</title>
+  <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
 </head>
@@ -18,6 +19,7 @@
         <input type="text" name="locationCity" placeholder="City" required>
         <input type="number" name="price" placeholder="Price" required>
         <input type="url" name="imgUrl" placeholder="Image Link" required>
+        <input type="number" name="contact" placeholder="Contact Phone Number" required>
         <button type="submit">Add House</button>
       </form>
 
@@ -27,7 +29,7 @@
       </div>
 
 
-      
+
   <form onsubmit="app.controllers.carController.addCar(event)">
     <label for="make">Make</label>
     <input type="text" name="make" placeholder="Make" required>

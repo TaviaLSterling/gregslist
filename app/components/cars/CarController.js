@@ -9,12 +9,12 @@ function drawCars() {
   for (let i = 0; i < cars.length; i++) {
     const car = cars[i];
     template += `
-    <div style="outline: 1px solid black" class="col-3">
+    <div class="col-3">
         <p>Make: ${car.make}</p>
-        <p>${car.model}</p>
-        <p>${car.price}</p>
-        <p>${car.year}</p>
-        <p>${car.color}</p>
+        <p>Model: ${car.model}</p>
+        <p>Price: ${car.price}</p>
+        <p>Year: ${car.year}</p>
+        <p>Color: ${car.color}</p>
         <img src="${car.imgUrl}" alt="somethingelse">
     </div>
     `

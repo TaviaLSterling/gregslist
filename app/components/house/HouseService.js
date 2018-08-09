@@ -24,19 +24,21 @@ export default class HouseService {
         house.numOfBathrooms,
         house.locationCity,
         house.price,
-        house.imgUrl
+        house.imgUrl,
+        house.contact
       ))
     })
     return housesCopy
   }
 
-  addhouse(formData) {
+  addHouse(formData) {
     let newHouse = new House(
       formData.numOfBedrooms.value,
       formData.numOfBathrooms.value,
       formData.locationCity.value,
       formData.price.value,
-      formData.imgUrl.value
+      formData.imgUrl.value,
+      formData.contact.value
     )
     houses.push(newHouse)
     console.log(houses)
