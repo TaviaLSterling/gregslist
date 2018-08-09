@@ -13,12 +13,17 @@
 
 <body>
     <form onsubmit="app.controllers.houseController.addHouse(event)">
-        
+        <label for="numOfBedrooms">Bedrooms</label>
         <input type="number" name="numOfBedrooms" placeholder="# of bedrooms" required>
+        <label for="numOfBathrooms">Bathrooms</label>
         <input type="number" name="numOfBathrooms" placeholder="# of bathrooms" required>
+        <label for="location">Location</label>
         <input type="text" name="locationCity" placeholder="City" required>
+        <label for="price">Price</label>
         <input type="number" name="price" placeholder="Price" required>
+        <label for="image">Image</label>
         <input type="url" name="imgUrl" placeholder="Image Link" required>
+        <label for="contact">Contact</label>
         <input type="number" name="contact" placeholder="Contact Phone Number" required>
         <button type="submit">Add House</button>
       </form>
@@ -33,10 +38,15 @@
   <form onsubmit="app.controllers.carController.addCar(event)">
     <label for="make">Make</label>
     <input type="text" name="make" placeholder="Make" required>
+    <label for="model">Model</label>
     <input type="text" name="model" placeholder="Model" required>
+    <label for="year">Year</label>
     <input type="number" name="year" placeholder="Year" value="2000" required>
+    <label for="price">Price</label>
     <input type="text" name="price" placeholder="Price" required>
+    <label for="color">Color</label>
     <input type="text" name="color" placeholder="Color" required>
+    <label for="image">Image</label>
     <input type="url" name="imgUrl" placeholder="Image Link" required>
     <button type="submit">Add Car</button>
   </form>
@@ -55,12 +65,17 @@
   </div>
 
   <form onsubmit="app.controllers.jobController.addJob(event)">
-        
+    <label for="positionTitle">Position Title</label>   
     <input type="text" name="positionTitle" placeholder="Position Title" required>
+    <label for="location">Location</label>
     <input type="text" name="location" placeholder="City" required>
+    <label for="pay">Pay per Hour</label>
     <input type="text" name="pay" placeholder="Pay" required>
+    <label for="image">Image</label>
     <input type="url" name="imgUrl" placeholder="Image Link" required>
+    <label for="description">Description</label>
     <input type="text" name="description" placeholder="Job Description" required>
+    <label for="contact">Contact</label>
     <input type="number" name="contactNum" placeholder="Contact Phone Number" required>
     <button type="submit">Add Job</button>
   </form>
