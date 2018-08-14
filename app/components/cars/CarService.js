@@ -4,7 +4,7 @@ let cars = []
 
 
 const carsApi = axios.create({
-  baseURL: 'https://bcw-gregslist.herokuapp.com/api/cars',
+  baseURL: 'https://bcw-gregslist.herokuapp.com/api/cars/',
   timeout: 3000
 })
 
@@ -54,6 +54,8 @@ export default class CarService {
       description: formData.description.value,
       imgUrl: formData.imgUrl.value
     })
+
+    
     //first parameter is any addition to base url
     //second parameter is object to pass to server
    carsApi.post('', newCar)
@@ -63,4 +65,16 @@ export default class CarService {
    })
 
  }
+ deleteCar(id,draw) {
+      carsApi.delete(id)
+      .then(res => {
+        this.getCars(draw)
+      })
+    }
+    bid(id, update, draw) {
+      carsApi.put(id, update)
+      .then(res => {
+        this.getCars(draw)
+      })
+    }
 }

@@ -6,5 +6,6 @@ export default class Car {
       this.price = data.price
       this.description = data.description
       this.imgUrl = data.imgUrl
+      this._id = data._id
     }
   }

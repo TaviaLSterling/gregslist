@@ -7,6 +7,6 @@ export default class House {
         this.imgUrl = data.imgUrl
         this.description = data.description
         this.year = data.year
-        this.id = data.id
+        this.id = data._id
     }
 }

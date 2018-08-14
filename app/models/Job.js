@@ -5,5 +5,6 @@ export default class Job {
         this.hours = data.hours
         this.description = data.description
         this.rate = data.rate
+        this.id = data._id
     }
 }
