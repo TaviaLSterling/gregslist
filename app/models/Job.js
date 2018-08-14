@@ -1,10 +1,9 @@
 export default class Job {
-    constructor(positionTitle,location,pay,description,imgUrl,contactNum) {
-        this.positionTitle = positionTitle
-        this.location = location
-        this.pay = pay
-        this.description = description
-        this.imgUrl = imgUrl
-        this.contactNum = contactNum
+    constructor(data) {
+        this.company = data.company
+        this.jobTitle = data.jobTitle
+        this.hours = data.hours
+        this.description = data.description
+        this.rate = data.rate
     }
 }
