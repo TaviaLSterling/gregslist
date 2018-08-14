@@ -2,8 +2,8 @@ import CarService from "./CarService.js";
 
 let carService = new CarService()
 
-function drawCars() {
-  let cars = carService.getCars()
+function drawCars(cars) {
+ // let cars = carService.getCars()
   let template = ''
 
   for (let i = 0; i < cars.length; i++) {
@@ -14,8 +14,8 @@ function drawCars() {
         <p>Model: ${car.model}</p>
         <p>Price: ${car.price}</p>
         <p>Year: ${car.year}</p>
-        <p>Color: ${car.color}</p>
-        <img src="${car.imgUrl}" alt="somethingelse">
+        <p>Description: ${car.description}</p>
+        <img src="${car.imgUrl}">
     </div>
     `
   }
@@ -28,15 +28,15 @@ function drawCars() {
 export default class CarController {
 
   constructor() {
-    drawCars()
+    carService.getCars(drawCars)
   }
 
-  addCar(triggeredEvent) {
-    triggeredEvent.preventDefault();
-    let formData = triggeredEvent.target
-    carService.addCar(formData)
+  addCar(e) {
+    e.preventDefault();
+    let formData = e.target
+    carService.addCar(formData,drawCars)
     formData.reset()
     drawCars()
-  }
+ }
 
 }

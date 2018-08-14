@@ -3,7 +3,7 @@ img {
     width: 100px
 }
 body {
-    background-color: grey;
+    background-color: rgb(236, 204, 252);
     font-family: 'Josefin Sans', sans-serif;
 }
 #job-form, #car-form, #house-form {
