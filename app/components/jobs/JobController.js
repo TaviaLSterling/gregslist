@@ -2,20 +2,19 @@ import JobService from "./JobService.js";
 
 let jobService = new JobService()
 
-function drawJobs() {
-  let jobs = jobService.getJobs()
+function drawJobs(jobs) {
+ // let jobs = jobService.getJobs()
   let template = ''
 
   for (let i = 0; i < jobs.length; i++) {
     const job = jobs[i];
     template += `
     <div id="job-ad" class="col-3">
-        <p>Position Title: ${job.positionTitle}</p>
-        <p>Location: ${job.location}</p>
-        <p>Pay: ${job.pay}</p>
+        <p>Company: ${job.company}</p>
+        <p>Job Title: ${job.jobTitle}</p>
+        <p>Rate: ${job.rate}</p>
+        <p>Hours: ${job.hours}</p>
         <p>Description: ${job.description}</p>
-        <p>Contact Phone Number: ${job.contactNum}</p>
-        <img src="${job.imgUrl}" alt="job picture">
     </div>
     `
   }
@@ -28,13 +27,13 @@ function drawJobs() {
 export default class JobController {
 
   constructor() {
-    drawJobs()
+    jobService.getJobs(drawJobs)
   }
 
-  addJob(triggeredEvent) {
-    triggeredEvent.preventDefault();
-    let formData = triggeredEvent.target
-    jobService.addJob(formData)
+  addJob(e) {
+    e.preventDefault();
+    let formData = e.target
+    jobService.addJob(formData,drawJobs)
     formData.reset()
     drawJobs()
   }
